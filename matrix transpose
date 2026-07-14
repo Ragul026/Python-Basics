@@ -1,0 +1,8 @@
+import numpy as np
+mat1=np.arange(12)
+mat1=np.reshape(mat1,(3,4))
+print("Print Original Matrix :")
+print(mat1)
+mat1=np.transpose(mat1)
+print("Print Transposed Matrix :")
+print(mat1)
