@@ -1,0 +1,33 @@
+import numpy as np
+
+#function that will take no of rows and cols and return a matrix
+
+def creatematrix(r,c):
+    mat = []
+    for i in range(r):
+        list1=[]
+
+        for j in range(c):
+            a=int(input("enter a element :"))
+            list1.append(a)
+        mat.append(list1)
+    return(mat)
+
+#below function will return the element from the matrix
+def redmatpos (redmat,rowpos,colpos):
+     return (redmat[rowpos][colpos])
+
+numrow=int(input("enter the number of row :"))
+numcol=int(input("enter the number of column :"))
+
+redmat=creatematrix(numrow,numcol)
+print(redmat)
+rowpos=int(input("enter the row :"))
+colpos=int(input("enter the column :"))
+
+if rowpos<0 or rowpos>=numrow or colpos<0 or colpos>=numcol:
+    print("invalid input")
+
+else:
+    element=redmatpos(redmat,rowpos,colpos)
+    print("element at the given position is :",element)
